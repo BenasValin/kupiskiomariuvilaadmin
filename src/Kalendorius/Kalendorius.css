@@ -1,0 +1,200 @@
+.calendar {
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #ccc;
+}
+
+.calendar-body {
+    padding: 10px;
+}
+
+.calendar-weekdays {
+    display: flex;
+}
+
+.calendar-weekday {
+    width: 14.28%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.calendar-days {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.calendar-day {
+    width: 14.28%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.calendar-day.blocked {
+    background-color: #f8d7da;
+    color: #721c24;
+    cursor: not-allowed;
+}
+
+.calendar-day.selected,
+.calendar-day.in-range {
+    background-color: #007bff;
+    color: white;
+}
+
+.calendar-day.hovered {
+    background-color: #d4e0ff;
+}
+
+.CalendarDay__selected, .CalendarDay__selected:active, .CalendarDay__selected:hover {
+    background: none;
+    border: none;
+}
+
+.CalendarDay__blocked {
+    background-color: rgba(255, 0, 0, 0.4) !important; /* Example for blocked dates */
+    color: #000;
+}
+
+.pastel-color {
+    background-color: var(--pastel-color);
+    color: #000;
+}
+
+/* General Styles */
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.houseContainer {
+    max-width: 1230px;
+    width: 100%;
+    margin: 2rem 0;
+}
+
+.houseCalendar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.kalendoriusContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.kalendoriusInfoContainer {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    padding: 1rem;
+    background-color: var(--lightGrey);
+    border-radius: 15px;
+}
+
+.notification {
+    width: 100%;
+    background-color: var(--lightBlue);
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 15px;
+    margin-top: 1rem;
+}
+
+/* Input and Button Styles */
+.kalendoriusInfoContainer input,
+.kalendoriusInfoContainer textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border: 1px solid var(--grey);
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.kalendoriusInfoContainer button {
+    background-color: var(--lightBlue);
+    color: white;
+    padding: 0.75rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.kalendoriusInfoContainer button:hover {
+    background-color: var(--darkBlue);
+}
+
+.kalendoriusInfoContainer button:active {
+    transform: scale(0.98);
+}
+
+/* Day Picker Styles */
+.CalendarMonth_caption * {
+    color: var(--grey);
+}
+
+.DayPicker_weekHeader_li * {
+    color: var(--grey);
+}
+
+.CalendarDay__blocked_out_of_range {
+    background-color: rgba(235, 235, 235, 0.568);
+}
+
+.CalendarDay__blocked_out_of_range:hover {
+    cursor: not-allowed;
+    background-color: rgba(235, 235, 235, 0.568);
+}
+
+.past-day {
+    background-color: grey;
+    color: white;
+    opacity: 0.5;
+}
+
+.datePickersContainer{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 3rem;
+}
+.DateInput_1{
+width: fit-content;
+}
+/* Responsive Styles */
+@media (max-width: 800px) {
+    .kalendoriusContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .kalendoriusInfoContainer {
+        width: 90%;
+        margin-top: 1rem;
+    }
+}

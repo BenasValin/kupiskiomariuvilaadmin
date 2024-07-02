@@ -1,0 +1,226 @@
+.navBarContainer {
+    height: 100px;
+    background-color: transparent;
+    margin: 5px;
+}
+
+.logo {
+    position: absolute;
+    height: 80px;
+    object-fit: contain;
+    left: 20px;
+    top: 10px;
+    z-index: 999;
+}
+
+.mainButtons {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #171717;
+    border-radius: 40px;
+    padding: 10px 20px;
+    width: 280px;
+    margin-left: auto;
+    box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.24);
+}
+
+.navButtons {
+    margin-right: 30px;
+    margin-top: 20px;
+    position: absolute;
+    right: 10px;
+    position: fixed;
+    z-index: 9999;
+}
+
+.rezervuotiButton {
+    transition: background-color 0.3s;
+}
+
+.rezervuotiButton:hover {
+    background-color: var(--grey);
+}
+
+.arrowDown {
+    max-height: 30px;
+    transition: transform 0.3s ease;
+    margin-left: auto;
+}
+
+.pagrindinisButton {
+    border: none;
+    background-color: transparent;
+    color: rgb(238, 235, 227);
+    cursor: pointer;
+    transition: color 0.3s;
+    font-size: 1em;
+    margin: 0 10px;
+}
+
+.secondaryButtons {
+    text-align: right;
+    align-items: end;
+    max-width: 320px;
+    transition: max-height 0.3s ease;
+    margin-top: 10px;
+}
+
+.namaiButton, .galerijaButton, .kontaktaiButton, .kaipMusRastiButton, .navContacts {
+    background-color: #171717;
+    border: none;
+    margin: 5px 10px;
+    padding: 10px 20px;
+    height: 40px;
+    border-radius: 25px;
+    color: rgb(238, 235, 227);
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.24);
+    transition: color 0.3s;
+}
+
+.namaiButton:hover, .galerijaButton:hover, .kontaktaiButton:hover, .kaipMusRastiButton:hover, .pagrindinisButton:hover {
+    color: rgb(170, 170, 170);
+}
+
+.navContacts {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    align-items: center;
+    justify-content: space-around;
+    width: 250px;
+    cursor: default;
+    z-index: 9999;
+    background-color: rgba(23, 23, 23, 0.8);
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.contactIcon .tooltip {
+    max-height: 100%;
+    margin: 10px;
+}
+
+.tooltip-text {
+    position: absolute;
+    top: -40px;
+    left: -50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    width: 140px;
+    color: white;
+    font-size: 12px;
+    background-color: #202325;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#fade {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+#delay {
+    opacity: 0;
+    transition: opacity 0.2s;
+    transition-delay: 1s;
+}
+
+.hover-text:hover #fade {
+    opacity: 1;
+}
+
+.hover-text:hover #delay {
+    opacity: 1;
+}
+
+.hover-text {
+    position: relative;
+    display: inline-block;
+    font-family: Arial;
+    text-align: center;
+    height: 50px;
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.phoneIcon {
+    height: 23px;
+    cursor: pointer;
+}
+
+.dropdownToggle {
+    display: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.dropdownToggle.rotate .arrowDown {
+    transform: rotate(180deg);
+}
+
+@media (max-width: 750px) {
+    .logo {
+        left: 10px;
+        transform: translateX(0);
+        height: 70px;
+        top: 10px;
+    }
+
+    .secondaryButtons {
+        display: flex;
+        flex-direction: column;
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    .secondaryButtons.active {
+        max-height: 500px;
+    }
+
+    .arrowDown {
+        display: block;
+        background-color: var(--grey);
+        border-radius: 9999px;
+    }
+
+    .mainButtons {
+        margin-right: -30px;
+    }
+
+    .dropdownToggle {
+        display: block;
+        margin-left: auto;
+        padding: 0;
+        background: none;
+        border: none;
+    }
+
+    .navButtons {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .galerijaButton, .namaiButton, .kaipMusRastiButton, .kontaktaiButton {
+        margin-right: 0;
+    }
+
+    .secondaryButtons {
+        margin-right: -20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .logo {
+        display: none;
+    }
+}
